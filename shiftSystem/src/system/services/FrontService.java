@@ -98,7 +98,7 @@ public class FrontService {
     }
 
     public  void submenu() {
-
+        sc.nextLine();
         //clear();
 
         do {

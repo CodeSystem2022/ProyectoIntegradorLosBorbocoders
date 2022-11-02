@@ -206,7 +206,7 @@ public class PersonService {
 
         System.out.print("Enter the identification number: ");
         int id = Integer.parseInt(sc.nextLine());
-
+        //sc.nextLine();
         Person foundedPerson;
 
         /*
@@ -244,14 +244,14 @@ public class PersonService {
             }
         }*/
 
-        List<Person> foundedPeople = peopleList.stream().filter(p -> p.getId() == id).toList();
+        List<Person> foundedPeople = peopleList.stream().filter(p -> p.getId() == id).collect(Collectors.toList());
 
         if (!foundedPeople.isEmpty()) {
 
             System.out.println("****************************************************************************************************");
             System.out.printf("%7s %15s %20s %20s %25s", "ID", "NAME", "LASTNAME", "PHONE", "EMAIL");
-            System.out.println("****************************************************************************************************");
             System.out.println();
+            System.out.println("****************************************************************************************************");
 
             for (Person p : foundedPeople) {
 

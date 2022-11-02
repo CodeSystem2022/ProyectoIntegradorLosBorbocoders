@@ -235,6 +235,7 @@ public class ShiftService {
         System.out.println("Press 1 to return to the principal menu.");
         System.out.println("Press 2 to exit.");
         option = sc.nextInt();
+        sc.nextLine();
 
         if (option == 1)
             frontService.menu();
@@ -244,6 +245,7 @@ public class ShiftService {
 
         System.out.print("Enter the identification number: ");
         int id = sc.nextInt();
+        //sc.nextLine();
 
         Person personShift = new Person();
 
@@ -269,7 +271,7 @@ public class ShiftService {
             else if (shiftList.size()-1 == i ){
 
                 System.out.println("the shift hasn't been founded!");
-
+                frontService.submenu();
             }
 
         }
